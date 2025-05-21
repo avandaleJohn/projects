@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Architecture Project Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 2em auto;
+      max-width: 800px;
+      line-height: 1.6;
+      color: #333;
+      padding: 0 1em;
+    }
+    h1, h2, h3 {
+      line-height: 1.2;
+    }
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    hr {
+      margin: 2em 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    code {
+      background: #f6f8fa;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Architecture Project Portfolio</h1>
+
+  <p>This portfolio is a growing collection of innovative, architecture-led projects I've developed and delivered over the years. Each one reflects real-world complexity — from regulatory constraints to performance trade-offs — that’s difficult to convey in a single line on a CV.</p>
+
+  <p>Rather than just show what was built, these pages walk through the reasoning behind design choices, the constraints we worked within, and how those decisions shaped the final solution. They aim to offer insight into not just <em>what</em> was done, but <em>why</em> it was done that way.</p>
+
+  <p>If you're a technical leader, architect, or engineer facing similar challenges, I hope you'll find useful patterns, inspiration, or even cautionary tales in these case studies.</p>
+
+  <hr>
+
+  <h2>🔗 Featured Project Pages</h2>
+  <ul>
+    <li>📄 <a href="https://avandalejohn.github.io/event-stream/" target="_blank">EventStream — Centralized Change Events in SQL Server</a></li>
+    <li>📄 <a href="https://avandalejohn.github.io/rethinking-restrictions/" target="_blank">Rethinking Restrictions — A New Model for Rule Application</a></li>
+  </ul>
+
+  <hr>
+
+  <h2>📌 Project 1: SQL Server EventStream</h2>
+
+  <p><strong>EventStream</strong> turns SQL Server into the authoritative source of truth for row-level change events. It replaces traditional audit tables with a scalable, event-driven design using:</p>
+
+  <ul>
+    <li><strong>Triggers + Service Broker</strong> to emit immutable events</li>
+    <li><strong>Automatic code generation</strong> that adapts to schema changes</li>
+    <li><strong>Structured event delivery</strong> to downstream consumers via queues</li>
+  </ul>
+
+  <h3>Key Features</h3>
+  <ul>
+    <li>Durable, tamper-evident auditability</li>
+    <li>Loose coupling between core database and external systems</li>
+    <li>Infrastructure-light implementation using native SQL Server features</li>
+  </ul>
+
+  <p>📖 Full walkthrough: <a href="https://avandalejohn.github.io/event-stream/" target="_blank">Visit the EventStream page</a></p>
+
+  <hr>
+
+  <h2>📌 Project 2: Rethinking Restrictions</h2>
+
+  <p><strong>Rethinking Restrictions</strong> is a conceptual and practical rework of how complex business rules ("restrictions") are modeled and enforced. Inspired by real-world challenges in regulatory compliance, the project proposes:</p>
+
+  <ul>
+    <li>A <strong>normalized data model</strong> separating rules from data</li>
+    <li>An architecture that supports <strong>composability and reuse</strong></li>
+    <li>A Google Maps–style metaphor to distinguish between <strong>rules</strong> and <strong>paths</strong></li>
+  </ul>
+
+  <h3>Why It Matters</h3>
+  <ul>
+    <li>Traditional relational approaches struggle with layered, overlapping, or temporal rule enforcement</li>
+    <li>This model allows for both <strong>traceable evaluation</strong> and <strong>future-proof extension</strong></li>
+    <li>Pairs naturally with event streaming for real-time validation</li>
+  </ul>
+
+  <p>📖 Explore the concept: <a href="https://avandalejohn.github.io/rethinking-restrictions/" target="_blank">Visit the Rethinking Restrictions page</a></p>
+
+  <hr>
+
+  <h2>🚀 Why These Projects?</h2>
+
+  <p>These are not academic experiments — they emerged from the need to modernize brittle, high-risk systems in regulated financial environments. Together, they offer a pattern language for transforming legacy SQL Server environments into:</p>
+
+  <ul>
+    <li>Stream-driven, loosely coupled ecosystems</li>
+    <li>Rule-governed platforms that scale with business complexity</li>
+    <li>Architecturally consistent foundations for compliance and audit</li>
+  </ul>
+
+  <p>If you're a systems architect, data engineer, or technical leader wrestling with auditability, integration, or compliance logic at scale — these projects aim to give you blueprints that are practical, testable, and extensible.</p>
+
+</body>
+</html>
