@@ -43,11 +43,9 @@
 
   <h1>Architecture Project Portfolio</h1>
 
-  <p>This portfolio is a growing collection of innovative, architecture-led projects I've developed and delivered over the years. Each one reflects real-world complexity — from regulatory constraints to performance trade-offs — that’s difficult to convey in a single line on a CV.</p>
+  <p>This portfolio showcases a growing collection of architecture-led projects I’ve designed and delivered. These projects tackle hard problems in data integration, compliance, auditability, and scalability using pragmatic patterns rooted in SQL Server, enterprise messaging, and clean design.</p>
 
-  <p>Rather than just show what was built, these pages walk through the reasoning behind design choices, the constraints we worked within, and how those decisions shaped the final solution. They aim to offer insight into not just <em>what</em> was done, but <em>why</em> it was done that way.</p>
-
-  <p>If you're a technical leader, architect, or engineer facing similar challenges, I hope you'll find useful patterns, inspiration, or even cautionary tales in these case studies.</p>
+  <p>Each write-up walks through not just what was built, but why it was built that way—highlighting design trade-offs, system constraints, and lessons learned. If you're a systems architect, engineering leader, or technologist dealing with similar challenges, I hope you’ll find these valuable.</p>
 
   <hr>
 
@@ -55,63 +53,85 @@
   <ul>
     <li>📄 <a href="https://avandalejohn.github.io/event-stream/" target="_blank">EventStream — Centralized Change Events in SQL Server</a></li>
     <li>📄 <a href="https://avandalejohn.github.io/rethinking-restrictions/" target="_blank">Rethinking Restrictions — A New Model for Rule Application</a></li>
+    <li>📄 <a href="https://avandalejohn.github.io/project-yellow/" target="_blank">Project Yellow — Reference Data for a Regulated World</a></li>
   </ul>
 
   <hr>
 
   <h2>📌 Project 1: SQL Server EventStream</h2>
 
-  <p><strong>EventStream</strong> turns SQL Server into the authoritative source of truth for row-level change events. It replaces traditional audit tables with a scalable, event-driven design using:</p>
+  <p><strong>EventStream</strong> transforms SQL Server into the system of record for structured change events. It replaces audit tables with an event-driven model using:</p>
 
   <ul>
-    <li><strong>Triggers + Service Broker</strong> to emit immutable events</li>
-    <li><strong>Automatic code generation</strong> that adapts to schema changes</li>
-    <li><strong>Structured event delivery</strong> to downstream consumers via queues</li>
+    <li><strong>Triggers + Service Broker</strong> to emit immutable change events</li>
+    <li><strong>Automatic code generation</strong> tied to schema evolution</li>
+    <li><strong>Reliable delivery</strong> of events to downstream consumers</li>
   </ul>
 
   <h3>Key Features</h3>
   <ul>
-    <li>Durable, tamper-evident auditability</li>
-    <li>Loose coupling between core database and external systems</li>
-    <li>Infrastructure-light implementation using native SQL Server features</li>
+    <li>High-integrity audit trail</li>
+    <li>Loose coupling between source and consumers</li>
+    <li>Zero external dependencies</li>
   </ul>
 
-  <p>📖 Full walkthrough: <a href="https://avandalejohn.github.io/event-stream/" target="_blank">Visit the EventStream page</a></p>
+  <p>📖 <a href="https://avandalejohn.github.io/event-stream/" target="_blank">View full architecture and walkthrough →</a></p>
 
   <hr>
 
   <h2>📌 Project 2: Rethinking Restrictions</h2>
 
-  <p><strong>Rethinking Restrictions</strong> is a conceptual and practical rework of how complex business rules ("restrictions") are modeled and enforced. Inspired by real-world challenges in regulatory compliance, the project proposes:</p>
+  <p><strong>Rethinking Restrictions</strong> reimagines how dynamic business rules—especially in compliance—are modeled and executed. Instead of hard-coding restrictions into relational logic, it proposes:</p>
 
   <ul>
-    <li>A <strong>normalized data model</strong> separating rules from data</li>
-    <li>An architecture that supports <strong>composability and reuse</strong></li>
-    <li>A Google Maps–style metaphor to distinguish between <strong>rules</strong> and <strong>paths</strong></li>
+    <li>A <strong>normalized rules engine</strong> based on data, not logic</li>
+    <li>A Google Maps–inspired metaphor to separate <em>rules</em> from <em>routes</em></li>
+    <li>Support for layered, reusable rule composition</li>
   </ul>
 
   <h3>Why It Matters</h3>
   <ul>
-    <li>Traditional relational approaches struggle with layered, overlapping, or temporal rule enforcement</li>
-    <li>This model allows for both <strong>traceable evaluation</strong> and <strong>future-proof extension</strong></li>
-    <li>Pairs naturally with event streaming for real-time validation</li>
+    <li>Traditional schemas struggle with overlapping and temporal logic</li>
+    <li>This model allows traceable, versioned evaluation paths</li>
+    <li>Integrates seamlessly with event-driven architectures</li>
   </ul>
 
-  <p>📖 Explore the concept: <a href="https://avandalejohn.github.io/rethinking-restrictions/" target="_blank">Visit the Rethinking Restrictions page</a></p>
+  <p>📖 <a href="https://avandalejohn.github.io/rethinking-restrictions/" target="_blank">Explore the full concept →</a></p>
+
+  <hr>
+
+  <h2>📌 Project 3: Project Yellow</h2>
+
+  <p><strong>Project Yellow</strong> addresses the often-neglected problem of enterprise reference data. It’s a deep dive into what reference data is, why it breaks systems, and how to manage it across silos.</p>
+
+  <ul>
+    <li>Defines a <strong>taxonomy for reference data types</strong> and lifecycles</li>
+    <li>Highlights real-world causes of drift, ambiguity, and misuse</li>
+    <li>Proposes a <strong>centralized stewardship pattern</strong> without bottlenecks</li>
+  </ul>
+
+  <h3>Use Cases</h3>
+  <ul>
+    <li>Cross-system reconciliation in regulated environments</li>
+    <li>Eliminating hard-coded lists, constants, and lookups</li>
+    <li>Making reference data a first-class citizen in your architecture</li>
+  </ul>
+
+  <p>📖 <a href="https://avandalejohn.github.io/project-yellow/" target="_blank">Read the full essay →</a></p>
 
   <hr>
 
   <h2>🚀 Why These Projects?</h2>
 
-  <p>These are not academic experiments — they emerged from the need to modernize brittle, high-risk systems in regulated financial environments. Together, they offer a pattern language for transforming legacy SQL Server environments into:</p>
+  <p>These aren’t academic prototypes—they were developed to solve problems inside banks, fintechs, and regulated platforms. Together, they form a growing toolkit for:</p>
 
   <ul>
-    <li>Stream-driven, loosely coupled ecosystems</li>
-    <li>Rule-governed platforms that scale with business complexity</li>
-    <li>Architecturally consistent foundations for compliance and audit</li>
+    <li>Making compliance traceable and explainable</li>
+    <li>Improving audit and observability across systems</li>
+    <li>Reducing integration friction via clean, event-driven boundaries</li>
   </ul>
 
-  <p>If you're a systems architect, data engineer, or technical leader wrestling with auditability, integration, or compliance logic at scale — these projects aim to give you blueprints that are practical, testable, and extensible.</p>
+  <p>If you're navigating the architectural challenges of enterprise modernization—especially in data-heavy, regulated contexts—these case studies are built for you.</p>
 
 </body>
 </html>
