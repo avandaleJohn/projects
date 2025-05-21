@@ -1,39 +1,63 @@
-# projects
-This is a site to expand a bit more on some of the interesting projects I've worked on over the years.
+# SQL Server EventStream & Rethinking Restrictions
 
+A pair of architecture-led projects that reimagine how enterprise systems track, stream, and apply data rules in SQL Server environments. Together, they demonstrate how to modernize legacy compliance systems using native capabilities, clear design thinking, and robust integration patterns.
 
-# SQL Server EventStream
+---
 
-A centralized, event-driven architecture for capturing and streaming row-level changes in SQL Server—built to replace a legacy history-tracking database with a robust, scalable solution that integrates seamlessly with downstream systems.
+## 🔗 Live Project Pages
 
-👉 **Live Project Page:** [EventStream Documentation & Demo](https://avandalejohn.github.io/event-stream/)
+- [📄 EventStream — Centralized Change Events in SQL Server](https://avandalejohn.github.io/event-stream/)
+- [📄 Rethinking Restrictions — A New Model for Rule Application](https://avandalejohn.github.io/rethinking-restrictions/)
 
-## Overview
+---
 
-This project presents a novel architectural pattern that turns Microsoft SQL Server into the authoritative event source for an enterprise platform. By leveraging native features such as triggers, stored procedures, and Service Broker, it delivers:
+## 📌 Project 1: SQL Server EventStream
 
-- **Immutable event capture** for every insert, update, and delete
-- **Schema evolution support** through automatic code generation
-- **Loose coupling** between systems via queues and event consumers
-- **End-to-end traceability** of data changes across the estate
+**EventStream** turns SQL Server into the authoritative source of truth for row-level change events. It replaces traditional audit tables with a scalable, event-driven design using:
 
-The solution addresses the challenges of auditing, replication, and integration by transforming operational database changes into structured events—offering a practical alternative to both Change Data Capture (CDC) and third-party pipelines.
+- **Triggers + Service Broker** to emit immutable events
+- **Automatic code generation** that adapts to schema changes
+- **Structured event delivery** to downstream consumers via queues
 
-## What's Inside
+### Key Features
 
-The GitHub Pages site linked above includes:
+- Durable, tamper-evident auditability
+- Loose coupling between core database and external systems
+- Infrastructure-light implementation using native SQL Server features
 
-- A full walkthrough of the architectural design
-- Diagrams illustrating event propagation and message flow
-- Code samples demonstrating how events are captured and consumed
-- A discussion of trade-offs and lessons learned
+📖 Full walkthrough: [Visit the EventStream page](https://avandalejohn.github.io/event-stream/)
 
-## Use Cases
+---
 
-- Replacing legacy audit or history tables
-- Building an event backbone without introducing Kafka or Debezium
-- Creating extensible integration patterns for financial systems
+## 📌 Project 2: Rethinking Restrictions
 
+**Rethinking Restrictions** is a conceptual and practical rework of how complex business rules ("restrictions") are modeled and enforced. Inspired by real-world challenges in regulatory compliance, the project proposes:
+
+- A **normalized data model** separating rules from data
+- An architecture that supports **composability and reuse**
+- A Google Maps–style metaphor to distinguish between **rules** and **paths**
+
+### Why It Matters
+
+- Traditional relational approaches struggle with layered, overlapping, or temporal rule enforcement
+- This model allows for both **traceable evaluation** and **future-proof extension**
+- Pairs naturally with event streaming for real-time validation
+
+📖 Explore the concept: [Visit the Rethinking Restrictions page](https://avandalejohn.github.io/rethinking-restrictions/)
+
+---
+
+## 🚀 Why These Projects?
+
+These are not academic experiments — they emerged from the need to modernize brittle, high-risk systems in regulated financial environments. Together, they offer a pattern language for transforming legacy SQL Server environments into:
+
+- Stream-driven, loosely coupled ecosystems
+- Rule-governed platforms that scale with business complexity
+- Architecturally consistent foundations for compliance and audit
+
+---
+
+If you're a systems architect, data engineer, or technical leader wrestling with auditability, integration, or compliance logic at scale — these projects aim to give you blueprints that are practical, testable, and extensible.
 ---
 
 If you're evaluating event streaming within a SQL Server environment—whether for compliance, analytics, or microservices integration—this project is a compelling reference implementation.
